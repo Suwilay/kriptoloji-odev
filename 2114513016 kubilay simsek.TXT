@@ -1,0 +1,207 @@
+
+GİTHUB ADRESİ
+
+
+https://github.com/Suwilay/kriptoloji-odev
+
+
+
+
+
+window = tk.Tk()
+window.title(
+window = tk.Tk()
+window.title
+
+window = tk.Tk()
+window
+
+window = tk.Tk()
+
+window
+
+
+# 
+
+# 
+
+# Tkinter modülünü içe aktar
+import tkinter as tk
+from tkinter import filedialog
+
+# Hashlib modülünü içe aktar
+import hashlib
+
+# Pencereyi oluştur
+window = tk.Tk()
+window.title("Dosya Doğrulama Uygulaması")
+window.geometry("400x300")
+
+# Dosya seçme işlevi
+def select_file():
+    
+   
+# Dosya seçme penceresini aç
+    file_path = filedialog.askopenfilename()
+
+    
+    file_path = filedialog.askopenfilename()
+
+   
+
+    file_path = filedialog.askopenfilename()
+
+
+    file_path = filedialog.askopenfilename
+# Dosya seçildiyse
+    
+   
+if file_path:
+        
+       
+# Dosya adını etikete yaz
+        file_label.config(text=file_path)
+
+        
+        file_label.config(text=file_path)
+
+
+       
+# Dosyayı oku
+        
+       
+with open(file_path, "rb") as f:
+            data = f.read()
+
+        
+            data = f.read()
+
+       
+
+            data = f.read()
+
+
+           
+# Hash çalışmasını seç
+        hash_algo = hash_var.get()
+
+        
+        hash_algo = hash_var.get()
+
+
+       
+# Hash çalışmasına göre hash değeri hesapla
+        
+       
+if hash_algo == "md5":
+            file_hash = hashlib.md5(data).hexdigest()
+        
+            file_hash = hashlib.md5(data).hexdigest()
+       
+
+            file_hash = hashlib.md5(data).hexdigest()
+
+            file
+
+           
+elif hash_algo == "sha1":
+            file_hash = hashlib.sha1(data).hexdigest()
+        
+            file_hash = hashlib.sha1(data).hexdigest()
+       
+
+            file_hash = hashlib.sha1(data).hexdigest()
+
+            file_hash = hashlib.sha1(data
+
+            file
+
+           
+elif hash_algo == "sha256":
+            file_hash = hashlib.sha256(data).hexdigest()
+        
+            file_hash = hashlib.sha256(data).hexdigest()
+       
+
+            file_hash = hashlib.sha256(data).hexdigest
+
+            file_hash = hashlib.sha256(data).
+
+            file
+
+           
+else:
+            file_hash = ""
+
+        
+
+# Hash değeri etiketi yaz
+        hash_label.config(text=file_hash)
+
+
+       
+# Hash karşılaştırma işlevi
+def compare_hash():
+    # Dosya hash değeri al
+    file_hash = hash_label.cget("text")
+
+    # Kullanıcının aldığı hash değeri al
+    user_hash = entry.get()
+
+    # Eğer ikisi eşitse
+    if file_hash == user_hash:
+        # Doğrulama başarılı mesaj ver
+        result_label.config(text=
+        result
+"Doğrulama başarılı!", fg="green")
+    # Sizin ikisi farklıysa
+    else:
+        # Doğrulama başarısız mesaj ver
+        result_label.config(text="Doğrulama başarısız!", fg="red")
+
+# Dosya seçme butonu oluştur
+select_button = tk.Button(window, text="Dosya Seç", command=select_file)
+select_button.pack()
+
+# Dosya adını gösteren etiket oluştur
+file_label = tk.Label(window, text="")
+file_label.pack()
+
+# Hash tutmasını seçmek için radyo butonlarını oluşturmak
+hash_var = tk.StringVar()
+hash_var.set("md5")
+
+md5_radio = tk.Radiobutton(window, text=
+
+md5_radio = tk.R
+"MD5", variable=hash_var, value="md5")
+md5_radio.pack()
+
+sha1_radio = tk.Radiobutton(window, text=
+md5_radio.pack()
+
+sha1
+"SHA1", variable=hash_var, value="sha1")
+sha1_radio.pack()
+
+sha256_radio = tk.Radiobutton(window, text="SHA256", variable=hash_var, value="sha256")
+sha256_radio.pack()
+
+# Hash değerini gösteren etiket oluştur
+hash_label = tk.Label(window, text="")
+hash_label.pack()
+
+# Kullanıcıdan hash değeri girişi isteyen etiket oluştur
+entry_label = tk.Label(window, text=
+entry_label = tk.Label
+"Hash değeri kullanımı:")
+entry_label.pack()
+
+# Kullanıcının hash değeri girebileceği giriş kutusu
+entry = tk.Entry(window)
+entry.pack()
+
+# Hash karşı
+
+
+
